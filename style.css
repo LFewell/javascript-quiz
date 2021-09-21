@@ -1,0 +1,21 @@
+h1 {
+    font-size: 40px;
+}
+
+h1, h2 {
+    text-align: center;
+    word-wrap: normal;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container{}
+
+.timer {
+    display: flex;
+    justify-content: flex-end;
+}
