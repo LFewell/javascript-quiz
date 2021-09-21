@@ -1,13 +1,19 @@
 h1 {
     font-size: 40px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
     max-width: 55px;
     max-height: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.quiz-container {
+#quiz-box , #question-box {
     display:flex;
     flex-direction: column;
     align-items: center;

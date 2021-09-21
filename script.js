@@ -1,5 +1,8 @@
 var startButton = document.querySelector(".start-button")
 var h1 = document.getElementById("coding");
+var displayQ = document.getElementById("question");
+var quizBox = document.getElementById("quiz-box");
+var questionBox = document.getElementById("question-box");
 
 // var time = 75;
 // var score = 0
@@ -38,14 +41,19 @@ startButton.addEventListener("click", function() {
 
 });
 
-startButton.addEventListener("click", buttonClick, false);
+questionBox.style.display = "none";
+
+startButton.addEventListener("click", buttonClick);
 
 function buttonClick() {
-    
-    h1.textContent = "You clicked the button";
+    if (questionBox.style.display = "block") {
+        quizBox.style.display = "none";
 
-
-
+    } else {
+        questionBox.style.display = "none";
+        quizBox.style.display = "block";
+    }
+    displayQ.innerHTML = question[0].question1;
 }
 
 var question = [
