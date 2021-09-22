@@ -13,12 +13,33 @@ button {
     align-items: center;
 }
 
-.quiz-wrapper,
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.quiz-container {
+    display: flex;
+    width: 50%;
+    margin: 40px auto;
+}
+
+.quiz-wrapper, 
 .question-wrapper {
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
+ul.question-list {
+    padding: 0;
+}
+
 
 .timer {
     display: flex;
@@ -26,5 +47,5 @@ button {
 }
 
 .is-hidden {
-    display:none;
+    display: none;
 }

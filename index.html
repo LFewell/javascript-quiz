@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Javascript Code Quiz</title>
@@ -10,22 +9,23 @@
         <header>
             <nav>
                 <a href="hiscore.html">Hi-scores</a>
+                <div class="timer">Time Left: 75</div>
             </nav>
-            <div class="timer">Time Left: 75</div>
         </header>
-
-        <div class="quiz-wrapper" id="quiz-box">
-            <h1 id="coding">Coding Quiz Challenge</h1>
-            <h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</h2>
-            <button class="start-button">Start</button>
-        </div>
-
-        <div class="question-wrapper is-hidden" id="question-box">
-            <h1 id="question"></h1>
-            <button class="choices">One</button>
-            <button class="choices">Two</button>
-            <button class="choices">Three</button>
-            <button class="choices">Four</button>
+        <div class="quiz-container">
+            <div class="quiz-wrapper" id="quiz-box">
+                <h1 class="quiz-title" id="coding">Coding Quiz Challenge</h1>
+                <h2 class="quiz-subtitle">
+                    Try to answer the following code-related questions within the time limit.
+                    Keep in mind that incorrect answers will penalize your score/time by 10 seconds!
+                </h2>
+                <button class="start-button">Start</button>
+            </div>
+            <div class="question-wrapper is-hidden" id="question-box">
+                <h2 class="question-text" id="question"></h1>
+                <ul class="question-list"></ul>
+                <button class="button__question-submit">Submit</button>
+            </div>
         </div>
         <script type="text/javascript" src="script.js"></script>
     </body>
