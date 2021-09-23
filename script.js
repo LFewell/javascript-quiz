@@ -1,3 +1,5 @@
+//Variables for the document
+
 var startButton = document.querySelector(".start-button");
 var questionSubmitButton = document.querySelector(".button__question-submit");
 var h1 = document.getElementById("coding");
@@ -6,9 +8,11 @@ var quizBox = document.getElementById("quiz-box");
 var questionBox = document.getElementById("question-box");
 var questionCount = 0;
 
+//Runs the functions when Start button and Submit buttons are clicked
 startButton.addEventListener("click", startQuiz);
 questionSubmitButton.addEventListener("click", handleNextQuestion);
 
+//Countdown timer
 function startTimer() {
   console.log("timer");
   var time = 75;
@@ -21,6 +25,7 @@ function startTimer() {
   }, 1000);
 }
 
+//Hides the current content on the page and runs the handleNextQuestion function
 function startQuiz() {
   startTimer();
 
@@ -33,6 +38,10 @@ function startQuiz() {
   handleNextQuestion();
 }
 
+//Pulls the questions from the arrays and prints them onto the screen
+
+
+//Stops the function from creating infinite buttons
 function handleNextQuestion() {
   if (document.querySelector(".question-choice") != null) {
     var previousQuestions = document.querySelectorAll(".question-choice");
@@ -48,7 +57,7 @@ function handleNextQuestion() {
     btn.setAttribute("class", "question-choice");
     btn.innerHTML += choice;
   });
-
+//stops the function when all questions have been presented
   if (questionCount < questions.length) {
     displayQ.innerHTML = questions[questionCount].question;
     questionCount += 1;
@@ -56,6 +65,8 @@ function handleNextQuestion() {
     return;
   }
 }
+
+//Array of objects containing the questions, choices, and answers
 
 var questions = [
   {
